@@ -1,11 +1,16 @@
-function calculateFuel() {
-    let distance = document.getElementById("distance").value;
-    let fuelRate = document.getElementById("fuelRate").value;
-
-    if (distance > 0 && fuelRate > 0) {
-        let fuelUsed = (distance / 100) * fuelRate;
-        document.getElementById("result").innerText = fuelUsed.toFixed(2);
-    } else {
-        alert("يرجى إدخال قيم صحيحة!");
+function calculate() {
+    let nitrateCount = document.getElementById("nitrateCount").value;
+    let healthFactor = document.getElementById("healthFactor").value;
+    
+    if (nitrateCount === "" || healthFactor === "") {
+        document.getElementById("result").innerText = "يرجى إدخال جميع البيانات!";
+        return;
     }
+    
+    nitrateCount = parseInt(nitrateCount);
+    healthFactor = parseInt(healthFactor);
+    
+    let recommended = Math.max(1, Math.round(nitrateCount / healthFactor));
+    
+    document.getElementById("result").innerText = "الكمية الصحية اليومية: " + recommended + " نترات";
 }
