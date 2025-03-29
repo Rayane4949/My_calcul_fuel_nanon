@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قياس استهلاك الوقود</title>
+    <title>Nanone Calculator Vap</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h2>حاسبة استهلاك الوقود</h2>
-        <label>المسافة المقطوعة (كم):</label>
-        <input type="number" id="distance" placeholder="أدخل المسافة">
+        <h1>حاسبة نترات Vap</h1>
+        <label for="nitrateCount">عدد النترات في اليوم:</label>
+        <input type="number" id="nitrateCount" placeholder="أدخل العدد">
         
-        <label>استهلاك الوقود لكل 100 كم:</label>
-        <input type="number" id="fuelRate" placeholder="مثلاً 3.5 لتر">
-
-        <button onclick="calculateFuel()">احسب الاستهلاك</button>
-
-        <h3>الاستهلاك المتوقع: <span id="result">0</span> لتر</h3>
+        <label for="healthFactor">مستوى صحتك (1-10):</label>
+        <input type="number" id="healthFactor" min="1" max="10" placeholder="أدخل مستوى صحتك">
+        
+        <button onclick="calculate()">احسب</button>
+        
+        <p id="result"></p>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
